@@ -62,6 +62,10 @@ const ChangedAlpha = Users.map((user) => {
 });
 // console.log(ChangedAlpha);
 
+const SomeAlph = Users.some((Ages) => Ages.age <= 18);
+
+console.log(SomeAlph);
+
 const NumberofGirls = ChangedAlpha.filter((girls) => girls.Gender === "Girls");
 
 // console.log(NumberofGirls);
@@ -89,7 +93,36 @@ const sliptletters = NumberofGirls.map((listOfGirls) => {
   };
 });
 
-console.log(sliptletters);
+// console.log(sliptletters);
+
+// checking for special charactes in strings
+
+const specialCharacter = (Password: string) => {
+  const charactes = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+
+  // console.log(charactes.test(Password));
+};
+
+specialCharacter("Hello Dear");
+
+specialCharacter("Hello_world");
+
+function containsSpecialChars(str: string) {
+  const specialChars = `\`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`;
+
+  const result = specialChars.split("").some((specialChar) => {
+    if (str.includes(specialChar)) {
+      return true;
+    }
+
+    return false;
+  });
+
+  return result;
+}
+
+// console.log(containsSpecialChars("hello")); // 👉️ false
+// console.log(containsSpecialChars("hello!")); // 👉️ true
 
 let Fruit: string[] = [
   "Apple",
