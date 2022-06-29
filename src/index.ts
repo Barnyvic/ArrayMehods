@@ -80,6 +80,17 @@ const Findind = NumberofGirls.findIndex((Ages) => Ages.age === 13);
 
 // console.log(Findind);
 
+// slite method
+const sliptletters = NumberofGirls.map((listOfGirls) => {
+  const First = listOfGirls.firstName;
+  const Last = listOfGirls.lastName;
+  return {
+    Name: First.concat(Last),
+  };
+});
+
+console.log(sliptletters);
+
 let Fruit: string[] = [
   "Apple",
   "Bannana",
