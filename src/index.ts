@@ -156,3 +156,30 @@ const reduceNum = filetredNum.reduceRight((a, b) => a + b);
 const findIndexNum = sortnumber.findIndex((num) => num === 20);
 
 // console.log(`the findIndex returns the index ${findIndexNum}`);
+
+const numbers = [
+  68, -68, 27, 94, 72, -25, -51, 32, 10, 64, -94, 4, 34, -86, 90, 81, 20, -56,
+  -91, -50,
+];
+
+const result = numbers.reduce((acc, curr) => acc + curr, 0);
+// console.log(result);
+
+const number2 = [
+  17, 0, 67, 41, 49, 21, 1, 86, 76, 2, 54, 14, 93, 84, 14, 77, 35, 7, 29, 64,
+];
+
+const result2 = number2.reduce(
+  (acc, curr) => acc + (curr % 2 === 0 ? 1 : 0),
+  0
+);
+
+// console.log(result2);
+
+const number3 = [
+  24, 30, 14, -8, 22, 17, -5, 25, 2, 25, 10, 10, 28, 33, 39, 28, 23, -1, 2, -4,
+];
+
+const result3 = number3.map((temp) => Math.trunc((temp * 9) / 5 + 32));
+
+console.log(result3);
